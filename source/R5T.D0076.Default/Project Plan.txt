@@ -1,0 +1,4 @@
+R5T.D0076.Default - Default service implementations library for ICommandLineOperator service (with asynchronous output and error handling).
+
+Goals
+

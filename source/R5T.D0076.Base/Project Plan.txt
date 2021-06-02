@@ -1,0 +1,4 @@
+R5T.D0076.Base - Base service definitions library for ICommandLineOperator service (with asynchronous output and error handling).
+
+Goals
+
