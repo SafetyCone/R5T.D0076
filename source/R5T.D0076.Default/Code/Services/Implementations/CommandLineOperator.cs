@@ -7,7 +7,7 @@ using R5T.D0074;
 using IBaseCommandLineOperator = R5T.D0075.ICommandLineOperator;
 
 
-namespace R5T.E0024.D003
+namespace R5T.D0076
 {
     public class CommandLineOperator : ICommandLineOperator
     {

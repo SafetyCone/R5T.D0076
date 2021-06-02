@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 
-namespace R5T.E0024.D003
+namespace R5T.D0076
 {
     public interface ICommandLineOperator
     {
