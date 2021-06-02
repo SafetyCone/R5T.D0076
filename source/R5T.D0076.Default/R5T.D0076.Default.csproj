@@ -11,8 +11,4 @@
     <ProjectReference Include="..\R5T.D0076.Base\R5T.D0076.Base.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Code\Extensions\" />
-  </ItemGroup>
-
 </Project>
