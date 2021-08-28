@@ -2,6 +2,8 @@
 
 using Microsoft.Extensions.DependencyInjection;
 
+using R5T.Magyar;
+
 using R5T.D0074.A001;
 using R5T.D0075;
 using R5T.D0076.Default;
