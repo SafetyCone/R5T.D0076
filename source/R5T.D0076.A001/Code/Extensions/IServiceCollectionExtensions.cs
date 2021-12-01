@@ -17,7 +17,7 @@ namespace R5T.D0076.A001
         {
             // Level 0.
             var taskQueueServices = services.AddTaskQueueServices();
-            var baseCommandLineOperatorAction = services.AddCommandLineOperatorAction();
+            var baseCommandLineOperatorAction = services.AddCommandLineOperatorAction_Old();
 
             // Level 1.
             var commandLineOperatorAction = services.AddCommandLineOperatorAction(
