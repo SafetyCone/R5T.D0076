@@ -7,25 +7,26 @@ using R5T.Magyar;
 using R5T.D0074.A001;
 using R5T.D0075.Default;
 using R5T.D0076.Default;
+using R5T.T0062;
 
 
 namespace R5T.D0076.A001
 {
-    public static class IServiceCollectionExtensions
+    public static class IServicActionExtensions
     {
-        public static ServicesAggregation01 AddCommandLineOperatorServices(this IServiceCollection services)
+        public static ServiceActionAggregation01 AddCommandLineOperatorServiceActions(this IServiceAction _)
         {
             // Level 0.
-            var taskQueueServices = services.AddTaskQueueServices();
-            var baseCommandLineOperatorAction = services.AddCommandLineOperatorAction_Old();
+            var taskQueueServices = _.AddTaskQueueServiceActions();
+            var baseCommandLineOperatorAction = _.AddCommandLineOperatorAction();
 
             // Level 1.
-            var commandLineOperatorAction = services.AddCommandLineOperatorAction_Old(
+            var commandLineOperatorAction = _.AddCommandLineOperatorAction(
                 baseCommandLineOperatorAction,
                 taskQueueServices.TaskQueueConstructorAction);
 
-            return new ServicesAggregation01()
-                .As<ServicesAggregation01, IServicesAggregation01Increment>(increment =>
+            return new ServiceActionAggregation01()
+                .As<ServiceActionAggregation01, IServiceActionAggregation01Increment>(increment =>
                 {
                     increment.BaseCommandLineOperatorAction = baseCommandLineOperatorAction;
                     increment.CommandLineOperatorAction = commandLineOperatorAction;
