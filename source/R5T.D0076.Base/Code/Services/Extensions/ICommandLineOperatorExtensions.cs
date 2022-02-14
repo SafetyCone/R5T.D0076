@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+using R5T.Magyar;
+
 using R5T.D0076;
 
 
@@ -9,7 +11,9 @@ namespace System
 {
     public static class ICommandLineOperatorExtensions
     {
-        public static Task<int> Run(this ICommandLineOperator commandLineOperator, string command, string arguments = Strings.Empty)
+        public static Task<int> Run(this ICommandLineOperator commandLineOperator,
+            string command,
+            string arguments = Strings.Empty_Const)
         {
             static Task WriteToConsole(string line)
             {
@@ -19,7 +23,9 @@ namespace System
             return commandLineOperator.Run(command, arguments, WriteToConsole, WriteToConsole);
         }
 
-        public static async Task<CommandLineExecutionResult> RunGetResult(this ICommandLineOperator commandLineOperator, string command, string arguments = Strings.Empty)
+        public static async Task<CommandLineExecutionResult> RunGetResult(this ICommandLineOperator commandLineOperator,
+            string command,
+            string arguments = Strings.Empty_Const)
         {
             var outputLines = new List<string>();
 
