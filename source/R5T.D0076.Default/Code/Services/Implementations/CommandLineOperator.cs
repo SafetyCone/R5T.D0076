@@ -3,13 +3,15 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 
 using R5T.D0074;
+using R5T.T0064;
 
 using IBaseCommandLineOperator = R5T.D0075.ICommandLineOperator;
 
 
 namespace R5T.D0076
 {
-    public class CommandLineOperator : ICommandLineOperator
+    [ServiceImplementationMarker]
+    public class CommandLineOperator : ICommandLineOperator, IServiceImplementation
     {
         private IBaseCommandLineOperator BaseCommandLineOperator { get; }
         private ITaskQueueConstructor TaskQueueConstructor { get; }
