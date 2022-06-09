@@ -12,7 +12,7 @@ namespace R5T.D0076.Default
     public static class IServiceActionExtensions
     {
         /// <summary>
-        /// Adds the <see cref="CommandLineOperator"/> implementation of <see cref="ICommandLineOperator"/> as a <see cref="ServiceLifetime.Singleton"/>.
+        /// Adds the <see cref="CommandLineOperator"/> implementation of <see cref="ICommandLineOperator"/> as a <see cref="Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton"/>.
         /// </summary>
         public static IServiceAction<ICommandLineOperator> AddCommandLineOperatorAction(this IServiceAction _,
             IServiceAction<IBaseCommandLineOperator> baseCommandLineOperatorAction,

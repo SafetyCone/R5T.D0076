@@ -2,7 +2,7 @@
 
 using Microsoft.Extensions.DependencyInjection;
 
-using R5T.Magyar;
+using R5T.Magyar.Extensions;
 
 using R5T.D0074.A001;
 using R5T.D0075.Default;
@@ -26,7 +26,7 @@ namespace R5T.D0076.A001
                 taskQueueServices.TaskQueueConstructorAction);
 
             return new ServiceActionAggregation01()
-                .As<ServiceActionAggregation01, IServiceActionAggregation01Increment>(increment =>
+                .ModifyAs<ServiceActionAggregation01, IServiceActionAggregation01Increment>(increment =>
                 {
                     increment.BaseCommandLineOperatorAction = baseCommandLineOperatorAction;
                     increment.CommandLineOperatorAction = commandLineOperatorAction;
